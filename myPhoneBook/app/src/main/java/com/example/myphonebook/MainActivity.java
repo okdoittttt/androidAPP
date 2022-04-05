@@ -26,13 +26,13 @@ public class MainActivity extends AppCompatActivity {
         listView.setAdapter(adapter);
 
         adapter.addItem(ContextCompat.getDrawable(this, R.drawable.pic3),
-                        "어머님", "01099314582");
+                        "어머님", "01000000000");
 
         adapter.addItem(ContextCompat.getDrawable(this, R.drawable.pic2),
-                "아버지", "01051520631");
+                "아버지", "01000000000");
 
         adapter.addItem(ContextCompat.getDrawable(this, R.drawable.pic4),
-                "누나", "01067070631");
+                "누나", "01000000000");
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
