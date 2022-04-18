@@ -1,4 +1,4 @@
-package com.example.p5;
+package com.example.p6;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -31,9 +33,9 @@ public class MyAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         if(view == null)
         {
-            Context context = view.getContext();
+            Context context = viewGroup.getContext();
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = inflater.inflate(R.layout.activity_result, viewGroup, false);
+            view = inflater.inflate(R.layout.itemlayout, viewGroup, false);
         }
 
         ImageView imageView = (ImageView) view.findViewById(R.id.imageView);
@@ -44,12 +46,12 @@ public class MyAdapter extends BaseAdapter {
 
         imageView.setImageResource(item.getImgId());
         name.setText(item.getName());
-        count.setText(item.getCount());
+        count.setText(item.getCount()+"");
 
         return view;
     }
 
-    public void addItem(int imgId, int count, String name) {
+    public void addItem(int imgId, int count, String name){
         Item item = new Item(imgId, count, name);
         items.add(item);
     }

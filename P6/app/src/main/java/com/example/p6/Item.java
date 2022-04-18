@@ -1,4 +1,4 @@
-package com.example.p5;
+package com.example.p6;
 
 public class Item {
     private int imgId;
@@ -6,8 +6,8 @@ public class Item {
     private String name;
 
     public Item(int imgId, int count, String name) {
-        this.count = count;
         this.imgId = imgId;
+        this.count = count;
         this.name = name;
     }
 
