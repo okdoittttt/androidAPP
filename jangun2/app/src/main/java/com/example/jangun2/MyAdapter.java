@@ -37,7 +37,7 @@ public class MyAdapter extends BaseAdapter {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(R.layout.itemlayout, viewGroup, false);
         }
-        ImageView imageView = (ImageView) view.findViewById(R.id.imageView);
+        ImageView imageView = (ImageView) view.findViewById(R.id.imageView12);
         TextView name = (TextView) view.findViewById(R.id.textView);
         TextView count = (TextView) view.findViewById(R.id.textView2);
 
