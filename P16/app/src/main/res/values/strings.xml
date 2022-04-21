@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">P16</string>
+    <string name="planet_prompt">Setting</string>
+
+    <string-array name="planets_array">
+        <item>a</item>
+        <item>b</item>
+        <item>c</item>
+    </string-array>
+
+
+</resources>
