@@ -9,8 +9,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
-
+    
     int result = 0;
     String num1, num2;
     @Override
