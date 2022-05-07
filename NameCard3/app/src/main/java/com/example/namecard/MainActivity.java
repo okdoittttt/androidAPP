@@ -55,8 +55,9 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 try
                 {
-                    URL url = new URL("http://10.0.2.2:8888/insert.php");                     // 10.0.2.2 는 Android 에서 실행될 때 주소이다.
-                    HttpURLConnection http = (HttpURLConnection) url.openConnection();
+                    URL url = new URL("Http://10.0.2.2:8888/insert.php");                     // 10.0.2.2 는 Android 에서 실행될 때 주소이다.
+                    HttpURLConnection http;
+                    http = (HttpURLConnection) url.openConnection();
                     // PHP에 대한 설정.
                     http.setDefaultUseCaches(false);
                     http.setDoInput(true);
@@ -77,15 +78,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 } catch (Exception e)
                 {
-                    // Android 에서는 main Thread 만 자기에게 요청된 요청을 처리할 수 있다.
-                    // 따라서 핸들러에서 Toast 를 요청하도록 한다.
-//                    handler.post(new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            Toast.makeText(MainActivity.this, "입력실패", Toast.LENGTH_SHORT).show();
-//                        }
-//                    });
-                    Log.e("", ""+e);
+                    Log.e("", "에러발생"+e);
                 }
             }
         }.start();
