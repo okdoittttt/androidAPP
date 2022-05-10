@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 name = inputName.getText().toString();
                 tell = inputTell.getText().toString();
                 email = inputEmail.getText().toString();
+
                 dataInsert(name, tell, email);
             }
         });
@@ -55,26 +56,28 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 try
                 {
-                    URL url = new URL("Http://10.0.2.2:8888/insert.php");                     // 10.0.2.2 는 Android 에서 실행될 때 주소이다.
+                    URL setURL = new URL("Http://10.0.2.2/insert03.php/");
                     HttpURLConnection http;
-                    http = (HttpURLConnection) url.openConnection();
-                    // PHP에 대한 설정.
+                    http = (HttpURLConnection) setURL.openConnection();
+
                     http.setDefaultUseCaches(false);
                     http.setDoInput(true);
                     http.setRequestMethod("POST");
                     http.setRequestProperty("content-type", "application/x-www-form-urlencoded");
-                    // Data를 차곡차곡 쌓아 놓는다.
+
                     StringBuffer buffer = new StringBuffer();
-                    buffer.append("name").append("=").append(name).append("/").append(tell).append("/").append(email).append("/");
-                    OutputStreamWriter outStream = new OutputStreamWriter(http.getOutputStream(), "UTF-8");
+                    buffer.append("name").append("=").append(name).append("_").append(tell).append("_").append(email).append("_");
+
+                    OutputStreamWriter outStream = new OutputStreamWriter(http.getOutputStream(), "utf-8");
                     outStream.write(buffer.toString());
                     outStream.flush();
-                    InputStreamReader inReader = new InputStreamReader(http.getInputStream(), "UTF-8");
-                    final BufferedReader reader = new BufferedReader(inReader);
 
-                    while (reader.readLine() != null)
-                    {
-                        System.out.println(reader.readLine());
+                    InputStreamReader tmp = new InputStreamReader(http.getInputStream(), "utf-8");
+                    BufferedReader reader = new BufferedReader(tmp);
+                    String str;
+                    while ((str=reader.readLine()) != null) {
+                        Log.e("ㄱㅏ나다라마바사아ㅏㄴ암ㄴㅇ람ㄴ앎낭람ㄴㅇㄹ", str);
+//                        System.out.println(reader.readLine());
                     }
                 } catch (Exception e)
                 {
