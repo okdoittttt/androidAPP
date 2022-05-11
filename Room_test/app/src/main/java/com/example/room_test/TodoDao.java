@@ -10,7 +10,7 @@ import java.util.List;
 
 @Dao
 public interface TodoDao {
-    @Query("SELECT * FROM Todo")
+    @Query("SELECT * FROM todo")
     List<Todo> getAll();
 
     @Insert

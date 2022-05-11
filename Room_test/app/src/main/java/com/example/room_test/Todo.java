@@ -32,9 +32,10 @@ public class Todo {
 
     @Override
     public String toString() {
-        return "Todo{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                '}';
+        final StringBuffer sb = new StringBuffer("Todo{");
+        sb.append("id=").append(id);
+        sb.append(" title='").append(title).append('\'');
+        sb.append('}');
+        return sb.toString();
     }
 }

@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         mtxt = findViewById(R.id.toto_edit);
         mresult = findViewById(R.id.textView);
 
-        final AppDatabase db = Room.databaseBuilder(this, AppDatabase.class, "todo-db").allowMainThreadQueries().build();
+        final AppDatabase db = Room.databaseBuilder(this, AppDatabase.class, "todo").allowMainThreadQueries().build();
 
         mresult.setText(db.todoDao().getAll().toString());
 
