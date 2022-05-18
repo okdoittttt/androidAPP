@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements SelectListener, V
     RecyclerView recyclerView;
     CustomAdapter adapter;
     ProgressDialog dialog;
-    Button b1, b2, b3, b4, b5, b6, b7;
+    Button b1, b2, b3, b4, b5, b6, b7, btn_board;
     SearchView searchView;
 
     @Override
@@ -64,6 +64,14 @@ public class MainActivity extends AppCompatActivity implements SelectListener, V
         b6.setOnClickListener(this);
         b7 = findViewById(R.id.btn_7);
         b7.setOnClickListener(this);
+        // board
+        btn_board = findViewById(R.id.btn_board);
+        btn_board.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "BOARD", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         RequestManager manager = new RequestManager(this);
         manager.getNewsHeadLines(listener, "general", null);

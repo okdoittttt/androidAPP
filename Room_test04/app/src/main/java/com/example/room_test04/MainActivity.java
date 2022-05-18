@@ -1,6 +1,7 @@
 package com.example.room_test04;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
 
 import android.os.Bundle;
 
