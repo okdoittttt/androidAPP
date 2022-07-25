@@ -1,33 +1,34 @@
 {
   "project_info": {
-    "project_number": "196217901864",
-    "project_id": "fir-account-469ea",
-    "storage_bucket": "fir-account-469ea.appspot.com"
+    "project_number": "760960563313",
+    "firebase_url": "https://fir-course-edb8c-default-rtdb.firebaseio.com",
+    "project_id": "fir-course-edb8c",
+    "storage_bucket": "fir-course-edb8c.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:196217901864:android:4cf11645bb52de2376f61d",
+        "mobilesdk_app_id": "1:760960563313:android:562d16b3089ec4f23c83d0",
         "android_client_info": {
-          "package_name": "com.example.firebaseaccount"
+          "package_name": "com.dit.facerecognition"
         }
       },
       "oauth_client": [
         {
-          "client_id": "196217901864-3r3nah27m07j3etmm1dfomom7e0pd934.apps.googleusercontent.com",
+          "client_id": "760960563313-5s9vp92ols800fccj4ngp6jv39r48k2s.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD7o45ZhITCMd1OTjMC6j-6U_0iDfcw8ZE"
+          "current_key": "AIzaSyDnK3lDmiDT8CWqg2HZfnHkPXn7X0UTSpc"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "196217901864-3r3nah27m07j3etmm1dfomom7e0pd934.apps.googleusercontent.com",
+              "client_id": "760960563313-5s9vp92ols800fccj4ngp6jv39r48k2s.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
